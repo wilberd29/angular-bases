@@ -1,0 +1,18 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- <dbz-list [PersonajeList] = "dbzService.Personajes"
+        (onDeletePersonaje)="dbzService.EliminarPersonaje($event)"></dbz-list> -->
+        <!-- <dbz-list [PersonajeList] = "dbzService.Personajes"
+        (onDeletePersonaje)="dbzService.EliminarPersonajeByID($event)"></dbz-list> -->
+        <dbz-list [PersonajeList] = "PersonajesServ"
+        (onDeletePersonaje)="onDeletePersonajeServ($event)"></dbz-list>
+    </div>
+
+    <div class="col">
+        <!-- <dbz-add-personaje (onNewPersonaje)="dbzService.AdicionarPersonaje($event)"></dbz-add-personaje> -->
+        <dbz-add-personaje (onNewPersonaje)="onNewPersonajeServ($event)"></dbz-add-personaje>
+    </div>
+</div>
